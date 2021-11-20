@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <title>Ham-Burguesa - Mostrar</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <img class="mb-4" src="img/logo.png" alt="" width="72" height="57">
+        <h1>Mostrando Datos de Contacto</h1>
+        <div class="mb-3">
+            <h2>Nombre: <span id="result"></span> </h2>
+        </div>
+        <div class="mb-3">
+            <h2>Email: <span id="result1"></span></h2>
+        </div>
+        <div class="mb-3">
+            <h2>Mensaje: <span id="result2"></span></h2>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021 | Todos los Derechos Reservados - Giorgio Ruitón</p>
+    </div>
+    <script>
+        document.getElementById("result").innerHTML = localStorage.getItem("passValue");
+        document.getElementById("result1").innerHTML = localStorage.getItem("passValue1");
+        document.getElementById("result2").innerHTML = localStorage.getItem("passValue2");
+    </script>
+</body>
+
+</html>

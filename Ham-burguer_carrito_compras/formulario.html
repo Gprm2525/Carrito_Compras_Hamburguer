@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Ham-Burguesa - Contacto</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/signin.css">
+    <script type="text/javascript" src="formulario.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-center">
+
+    <main class="form-signin">
+        <form method="get" action=mostrar.html>
+            <img class="mb-4" src="img/logo.png" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Ponerse en Contacto</h1>
+
+            <p>Su dirección de correo electronico no será publicada.
+                <br> Llenar los siguientes campos:
+            </p>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <input type="text" class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje">
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" onclick="getTxt()" type="Submit" value="Submit">Enviar</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2021 | Todos los Derechos Reservados - Giorgio Ruitón</p>
+        </form>
+    </main>
+    <script>
+        function getTxt() {
+            var txtValue = document.getElementById("name").value;
+            localStorage.setItem("passValue", txtValue);
+
+            var txtValue1 = document.getElementById("email").value;
+            localStorage.setItem("passValue1", txtValue1);
+
+            var txtValue2 = document.getElementById("mensaje").value;
+            localStorage.setItem("passValue2", txtValue2);
+        }
+    </script>
+</body>
+
+</html>
